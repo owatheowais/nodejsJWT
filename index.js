@@ -6,6 +6,9 @@ const dotenv=require('dotenv');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
 
+//PORT
+var PORT=process.env.PORT || 3000;
+
 dotenv.config();
 
 //Connect to DB
@@ -22,4 +25,4 @@ app.use('/api/user', authRoute);
 app.use('/api/posts',postRoute);
 
 
-app.listen(3000,()=>console.log('Server Up and running'));
+app.listen(PORT,()=>console.log('Server Up and running'));
