@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../model/User');
 const verify = require('./verifyToken');
 
-router.get('/', verify, async (req, res) => {
+router.get('/',  async (req, res) => {
     //res.send('On Post');  
     try {
         const posts = await User.find();
